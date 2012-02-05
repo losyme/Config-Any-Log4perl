@@ -82,7 +82,6 @@ Version 0.01
 =head1 SYNOPSIS
 
     use Config::Any;
-    use Log::Log4perl;
     
     ...
     
