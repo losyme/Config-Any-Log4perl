@@ -82,6 +82,7 @@ Version 0.01
 =head1 SYNOPSIS
 
     use Config::Any;
+    use Log::Log4perl;
     
     ...
     
@@ -90,6 +91,10 @@ Version 0.01
         , use_ext => 1
         , driver_args => { Log4perl => { config_name => 'logger' }}
     });
+    
+    ...
+    
+    Log::Log4perl->init( $config->{logger} );
     
     ...
 

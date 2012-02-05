@@ -6,8 +6,38 @@ Config::Any::Log4perl
 Description
 -----------
 
+Loads Log4perl configuration files.
+
+Example:
+
+    ### sample.log4perl
+    log4perl.logger                                   = TRACE, SCREEN
+    log4perl.appender.SCREEN                          = Log::Log4perl::Appender::Screen
+    log4perl.appender.SCREEN.stderr                   = 1
+    log4perl.appender.SCREEN.layout                   = Log::Log4perl::Layout::PatternLayout
+    log4perl.appender.SCREEN.layout.ConversionPattern = %d %-5p [%5P] %m%n
+
 Synopsis
 --------
+
+    use Config::Any;
+    use Log::Log4perl;
+    
+    ...
+    
+    my $config = Config::Any->load_files({
+          files => \@files
+        , use_ext => 1
+        , driver_args => { Log4perl => { config_name => 'logger' }}
+    });
+    
+    ...
+    
+    Log::Log4perl->init( $config->{logger} );
+    
+    ...
+
+See [Config::Any](http://search.cpan.org/~bricas/Config-Any/)
 
 Author
 ------
