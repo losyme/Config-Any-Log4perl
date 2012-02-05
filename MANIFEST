@@ -8,9 +8,13 @@ t/test/tidy.pm
 t/00_start.t
 t/01_prerequisites.t
 t/02_load.t
+t/03_api.t
+t/04_basic.t
+t/05_config_any.t
 t/98_distribution.t
 t/98_manifest.t
 t/98_pod-coverage.t
 t/98_pod.t
 t/98_portability.t
 t/99_end.t
+t/data/Sample.log4perl
