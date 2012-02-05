@@ -21,7 +21,6 @@ Synopsis
 --------
 
     use Config::Any;
-    use Log::Log4perl;
     
     ...
     
@@ -30,10 +29,6 @@ Synopsis
         , use_ext => 1
         , driver_args => { Log4perl => { config_name => 'logger' }}
     });
-    
-    ...
-    
-    Log::Log4perl->init( $config->{logger} );
     
     ...
 

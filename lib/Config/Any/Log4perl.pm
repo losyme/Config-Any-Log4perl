@@ -93,10 +93,6 @@ Version 0.01
     });
     
     ...
-    
-    Log::Log4perl->init( $config->{logger} );
-    
-    ...
 
 See L<Config::Any>
 
