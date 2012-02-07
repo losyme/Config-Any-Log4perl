@@ -25,7 +25,8 @@ WriteMakefile
       }
     , PREREQ_PM
       => {
-          'Config::Any' => 0
+          'parent'      => 0
+        , 'Config::Any' => 0
       }
 );
 

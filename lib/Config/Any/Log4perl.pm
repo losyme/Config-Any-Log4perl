@@ -12,7 +12,7 @@ package Config::Any::Log4perl;
 use strict;
 use warnings FATAL => qw(all);
 
-our $VERSION   =   '0.01';
+our $VERSION   =   '0.02';
 our $AUTHORITY = 'LOSYME';
 
 use parent qw(Config::Any::Base);
@@ -77,7 +77,7 @@ Config::Any::Log4perl - Config::Any loader for Log4perl config files.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 SYNOPSIS
 
@@ -195,7 +195,7 @@ Repository available at L<https://github.com/losyme/Config-Any-Log4perl>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright E<copy> 2012 by LoE<iuml>c TROCHET.
+Copyright (c) 2012 by LoE<iuml>c TROCHET.
 
 This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
