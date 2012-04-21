@@ -26,7 +26,8 @@ Module::Build->new(
       }
     , requires
       => {
-          'Config::Any' => 0
+          'parent'      => 0
+        , 'Config::Any' => 0
       } 
 )->create_build_script;
 

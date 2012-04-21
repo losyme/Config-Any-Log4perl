@@ -10,9 +10,9 @@
 package Config::Any::Log4perl;
 
 use strict;
-use warnings FATAL => qw(all);
+use warnings;
 
-our $VERSION   =   '0.02';
+our $VERSION   =   '0.03';
 our $AUTHORITY = 'LOSYME';
 
 use parent qw(Config::Any::Base);

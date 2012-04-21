@@ -42,7 +42,7 @@ Lo&iuml;c TROCHET <losyme@gmail.com>
 Copyright and license
 ---------------------
 
-Copyright &copy; 2011 by Lo&iuml;c TROCHET.
+Copyright &copy; 2012 by Lo&iuml;c TROCHET.
 
 This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
