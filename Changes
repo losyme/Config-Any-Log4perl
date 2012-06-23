@@ -12,8 +12,11 @@ Revision history
 
 0.01    05.02.2012
         First version, released by LOSYME
-
+        
 0.02    07.02.2012
         Added 'parent' in the prerequisites
+        
+0.03    21.04.2012
+        Cosmetic changes and add prerequisite module 'parent' for Build.PL
 
 ####### END ############################################################################################################
