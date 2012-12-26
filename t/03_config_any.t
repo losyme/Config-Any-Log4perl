@@ -1,14 +1,6 @@
-#######
-##
-##----- LOSYME
-##----- Config::Any::Log4perl
-##----- Config::Any loader for Log4perl config files 
-##----- 05_config_any.t
-##
-########################################################################################################################
-
 use strict;
 use warnings;
+
 use Test::More;
 use Config::Any;
 
@@ -22,7 +14,7 @@ plan tests => 1;
     });
 
     is_deeply $config
-            , [{ 't/data/Sample.log4perl' => 
+            , [{ 't/data/Sample.log4perl' =>
                     {
                         'logger' => {
                             'log4perl.appender.SCREEN.layout' => 'Log::Log4perl::Layout::PatternLayout'
@@ -35,5 +27,3 @@ plan tests => 1;
               }]
             , 'load_files';
 }
-
-####### END ############################################################################################################

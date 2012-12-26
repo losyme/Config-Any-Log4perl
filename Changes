@@ -1,22 +1,15 @@
-#######
-##
-##----- LOSYME
-##----- Config::Any::Log4perl
-##----- Config::Any loader for Log4perl config files 
-##----- Changes
-##
-########################################################################################################################
 
 Revision history
 ----------------
 
-0.01    05.02.2012
-        First version, released by LOSYME
-        
-0.02    07.02.2012
-        Added 'parent' in the prerequisites
-        
-0.03    21.04.2012
-        Cosmetic changes and add prerequisite module 'parent' for Build.PL
+{{$NEXT}}
+          Use Dist::Zilla
 
-####### END ############################################################################################################
+0.03      21.04.2012
+          Cosmetic changes and add prerequisite module 'parent' for Build.PL
+
+0.02      07.02.2012
+          Added 'parent' in the prerequisites
+
+0.01      05.02.2012
+          First version, released by LOSYME

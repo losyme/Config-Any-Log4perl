@@ -1,0 +1,114 @@
+# NAME
+
+Config::Any::Log4perl - Config::Any loader for Log4perl config files
+
+# VERSION
+
+version 0.123610
+
+# SYNOPSIS
+
+    use Config::Any;
+
+    ...
+
+    my $config = Config::Any->load_files({
+          files => \@files
+        , use_ext => 1
+        , driver_args => { Log4perl => { config_name => 'logger' }}
+    });
+
+    ...
+
+See [Config::Any](http://search.cpan.org/perldoc?Config::Any)
+
+# DESCRIPTION
+
+Loads Log4perl configuration files.
+
+Example:
+
+    ### sample.log4perl
+    log4perl.logger                                   = TRACE, SCREEN
+    log4perl.appender.SCREEN                          = Log::Log4perl::Appender::Screen
+    log4perl.appender.SCREEN.stderr                   = 1
+    log4perl.appender.SCREEN.layout                   = Log::Log4perl::Layout::PatternLayout
+    log4perl.appender.SCREEN.layout.ConversionPattern = %d %-5p [%5P] %m%n
+
+# METHODS
+
+## extensions
+
+Return an array of valid extensions.
+
+- _Return value_
+
+    ARRAY - qw( log4perl ).
+
+## load($file, $args)
+
+Attempts to load a Log4perl config file.
+
+- _Parameters_
+
+    `$file` - SCALAR - The Log4perl config file.
+
+    `$args` - HASHREF - optional - Possible options:
+
+        __config\_name__ - A key used to store configuration.
+
+- _Return value_
+
+    HASHREF - Log4perl configuration.
+
+- _Example_
+
+    With this Log4perl configuration file:
+
+        ### sample.log4perl
+        log4perl.logger                                   = TRACE, SCREEN
+        log4perl.appender.SCREEN                          = Log::Log4perl::Appender::Screen
+        log4perl.appender.SCREEN.stderr                   = 1
+        log4perl.appender.SCREEN.layout                   = Log::Log4perl::Layout::PatternLayout
+        log4perl.appender.SCREEN.layout.ConversionPattern = %d %-5p [%5P] %m%n
+
+    If __config\_name__ is undefined the return value is:
+
+        {
+            'log4perl.appender.SCREEN.layout' => 'Log::Log4perl::Layout::PatternLayout',
+            'log4perl.appender.SCREEN.layout.ConversionPattern' => '%d %-5p [%5P] %m%n',
+            'log4perl.appender.SCREEN.stderr' => '1',
+            'log4perl.logger' => 'TRACE, SCREEN',
+            'log4perl.appender.SCREEN' => 'Log::Log4perl::Appender::Screen'
+        }
+
+    If __config\_name__ is defined like this:
+
+        config_name => 'logger'
+
+    the return value is:
+
+        {
+            'logger' => {
+                'log4perl.appender.SCREEN.layout' => 'Log::Log4perl::Layout::PatternLayout',
+                'log4perl.appender.SCREEN.layout.ConversionPattern' => '%d %-5p [%5P] %m%n',
+                'log4perl.appender.SCREEN.stderr' => '1',
+                'log4perl.appender.SCREEN' => 'Log::Log4perl::Appender::Screen',
+                'log4perl.logger' => 'TRACE, SCREEN'
+            }
+        }
+
+# SEE ALSO
+
+[Log::Log4perl](http://search.cpan.org/perldoc?Log::Log4perl)
+
+# AUTHOR
+
+Loïc TROCHET <losyme@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Loïc TROCHET.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
