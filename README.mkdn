@@ -4,7 +4,7 @@ Config::Any::Log4perl - Config::Any loader for Log4perl config files
 
 # VERSION
 
-version 0.123610
+version 0.130020
 
 # SYNOPSIS
 
